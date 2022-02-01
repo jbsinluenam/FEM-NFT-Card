@@ -20,7 +20,7 @@ This is a solution to the [NFT preview card component challenge on Frontend Ment
 
 ### The challenge
 
-(.\desktop-preview.jpg)
+(./design/desktop-preview.jpg)
 
 Users should be able to:
 
@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+(./screenshot.jpg)
 
 ### Links
 
