@@ -1,0 +1,175 @@
+:root {
+  /**
+  * color
+  */
+
+  /**
+  * primary color
+  */
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+
+  /**
+  * neutral color
+  */
+  --very-dark-blue-main-BG: hsl(217, 54%, 11%);
+  --very-dark-blue-card-BG: hsl(216, 50%, 16%);
+  --very-dark-blue-line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+
+/*--------------------------------*\
+  #RESET
+\*--------------------------------*/
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  font: inherit;
+}
+
+button {
+  font: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+img {
+  display: block;
+}
+
+html {
+  font-family: "Outfit";
+  font-size: 18px;
+  scroll-behavior: smooth;
+}
+
+/*--------------------------------*\
+  #MAIN CONTAINER
+\*--------------------------------*/
+
+.container {
+  background-color: var(--very-dark-blue-main-BG);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/*--------------------------------*\
+  #CARD
+\*--------------------------------*/
+
+.card {
+  width: 340px;
+  height: 570px;
+  background-color: var(--very-dark-blue-card-BG);
+  border-radius: 16px;
+}
+
+.card-img,
+.card-detail,
+.card-author {
+  margin: 24px;
+}
+
+.card-img img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card-detail {
+  margin-bottom: 18px;
+}
+
+h3 {
+  font-size: 22px;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 16px;
+}
+
+p {
+  color: var(--soft-blue);
+}
+
+.text-detail {
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+.text-price {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.price,
+.time {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+hr {
+  margin: 16px 22px;
+  border-width: 0px;
+  height: 1.5px;
+  background-color: var(--very-dark-blue-line);
+}
+
+.card-author {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin: 16px 24px;
+}
+
+.card-author img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: solid white 1.5px;
+}
+
+.card-author p {
+  font-size: 16px;
+  color: var(--soft-blue);
+}
+
+.card-author span {
+  color: white;
+}
+
+/*--------------------------------*\
+  #HELPER CLASS
+\*--------------------------------*/
+
+.font-pm-soft {
+  color: var(--soft-blue);
+}
+
+.font-pm-cyan {
+  color: var(--cyan);
+}
+
+.attribution {
+  display: none;
+}
