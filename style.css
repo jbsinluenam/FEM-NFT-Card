@@ -30,20 +30,8 @@
   box-sizing: border-box;
 }
 
-li {
-  list-style: none;
-}
-
 a {
   text-decoration: none;
-  font: inherit;
-}
-
-button {
-  font: inherit;
-  border: none;
-  background: none;
-  cursor: pointer;
 }
 
 img {
@@ -53,7 +41,6 @@ img {
 html {
   font-family: "Outfit";
   font-size: 18px;
-  scroll-behavior: smooth;
 }
 
 /*--------------------------------*\
@@ -80,21 +67,6 @@ html {
   border-radius: 16px;
 }
 
-.card-img,
-.card-detail,
-.card-author {
-  margin: 24px;
-}
-
-.card-img img {
-  width: 100%;
-  border-radius: 10px;
-}
-
-.card-detail {
-  margin-bottom: 18px;
-}
-
 h3 {
   font-size: 22px;
   font-weight: 600;
@@ -106,9 +78,59 @@ p {
   color: var(--soft-blue);
 }
 
+a {
+  color: white;
+}
+
+a:hover {
+  color: var(--cyan);
+}
+
+/*--------------------------------*\
+  #CARD-IMG
+\*--------------------------------*/
+.card-img {
+  margin: 24px auto;
+  width: 292px;
+  height: 292px;
+  position: relative;
+}
+
+.main-img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.overlay-img {
+  position: absolute;
+  top: 0px;
+  display: flex;
+  flex-direction: column;
+  width: 292px;
+  height: 292px;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 255, 247, 0.6);
+  border-radius: 10px;
+  opacity: 0;
+  transition: all 0.25s;
+}
+
+.overlay-img:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+/*--------------------------------*\
+  #CARD-DETAIL
+\*--------------------------------*/
+.card-detail {
+  margin: 18px 24px;
+}
+
 .text-detail {
   font-size: 17px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.5;
   margin-bottom: 16px;
 }
@@ -124,16 +146,24 @@ p {
 .price,
 .time {
   display: flex;
-  gap: 8px;
   align-items: center;
+  gap: 8px;
 }
 
+/*--------------------------------*\
+  #HR
+\*--------------------------------*/
+
 hr {
-  margin: 16px 22px;
+  margin: 16px 24px;
   border-width: 0px;
   height: 1.5px;
   background-color: var(--very-dark-blue-line);
 }
+
+/*--------------------------------*\
+  #CARD-AUTHOR
+\*--------------------------------*/
 
 .card-author {
   display: flex;
@@ -150,8 +180,7 @@ hr {
 }
 
 .card-author p {
-  font-size: 16px;
-  color: var(--soft-blue);
+  font-size: 15px;
 }
 
 .card-author span {
@@ -171,5 +200,13 @@ hr {
 }
 
 .attribution {
-  display: none;
+  position: absolute;
+  bottom: 1%;
+  font-size: 11px;
+  text-align: center;
+  color: var(--white);
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
